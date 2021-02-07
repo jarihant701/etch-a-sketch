@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+:root {
+  --primary-color: #7edf94;
+  --secondary-color: #df7ec9;
+  --text-color: #09230f;
+  --background-color: #fafafa;
+}
+
+body {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Poppins',sans-serif;
+}
+
+h1{
+    color: var(--primary-color);
+    font-size: 64px;
+    text-align: center;
+}
+
+.slider-input{ 
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#size {
+    -webkit-appearance: none;
+    width: 75%;
+    max-width: 300px;
+    height: 10px;
+    background: var(--primary-color);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 10px;
+    margin: 16px;
+    vertical-align: middle;
+}
+
+#size:hover {
+  opacity: 1;
+}
+
+#size::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  cursor: pointer;
+}
+
+#size::-moz-range-thumb {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  cursor: pointer;
+}
+
+button {
+  outline: none;
+  padding: 10PX 20px;
+  border: none;
+  background-color: VAR(--secondary-color);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px var(--secondary-color);
+  transition: transform 0.07s;
+  margin-bottom: 16px;
+}
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(1);
+}
+
+#grid,
+#settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#grid {
+  flex-grow: 1;
+}
+#grid-container {
+  padding: 4px;
+  display: grid;
+  width: 100%;
+  max-width: 968px;
+  grid-gap: 4px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-cell {
+  /* background-color: black; */
+  border: 1px solid black;
+}
