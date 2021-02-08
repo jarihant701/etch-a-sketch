@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,25 +8,37 @@
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css" />
-</head>
+  </head>
 
-<body>
-    <div id="settings">
-        <h1>Etch-A-Sketch</h1>
-        <label for="range">Select Grid Size</label>
-        <div class="slider-input">
-            <input type="range" name="size" id="size" min="1" max="100" value="16"><span id="sliderValue">16</span>
-        </div>
-        <button>Change Size</button>
-    </div>
-    <div id="grid">
-        <div id="grid-container">
-            
-        </div>
-    </div>
-</body>
-
+  <body>
+    <header id="header">
+      <h1>Etch-A-Sketch</h1>
+      <p>Click on a cell to toggle Pen</p>
+      <label for="range">Select Grid Size</label>
+      <div class="slider-input">
+        <input
+          type="range"
+          name="size"
+          id="size"
+          min="1"
+          max="100"
+          value="16"
+        /><span id="sliderValue">16</span>
+      </div>
+      <button id="changeSize" onclick="createGrid( size.value)">Change Size</button>
+    </header>
+    <main id="grid">
+      <div id="grid-container"></div>
+    </main>
+    <footer>
+      Created By <a target="_blank" href="https://github.com/jarihant701">Arihant Jain</a>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
 </html>

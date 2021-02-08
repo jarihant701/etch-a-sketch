@@ -90,8 +90,7 @@ button:active {
   transform: scale(1);
 }
 
-#grid,
-#settings {
+#header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,17 +98,45 @@ button:active {
 }
 #grid {
   flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center ;
 }
 #grid-container {
   padding: 4px;
   display: grid;
-  width: 100%;
-  max-width: 968px;
-  grid-gap: 4px;
-  grid-template-columns: repeat(4, 1fr);
+  width: 500px;
+  height: 500px;
+  margin: 10px auto;
 }
 
 .grid-cell {
   /* background-color: black; */
-  border: 1px solid black;
+  border: 1px solid var(--primary-color);
+}
+
+.grid-cell:hover{
+  background-color: var(--secondary-color);
+}
+
+footer {
+  padding: 10px;
+  background-color: var(--text-color);
+}
+
+footer, a {
+  text-align: center;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--background-color);
+}
+
+@media (max-width:499px) {
+  #grid-container {
+    width: 300px;
+    height: 300px;
+  }
 }
